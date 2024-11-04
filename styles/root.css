@@ -1,0 +1,43 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --bg-primary: #23262C;
+    --bg-secondary: #2e3239;
+
+    --tx-primary: #f4f6fa;
+    --tx-secondary: #727479;
+}
+
+body{
+    background-color: var(--bg-primary);
+
+    padding: 5rem;
+    min-height: 100vh;
+}
+
+button{
+
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.hide{
+    display: none;
+}
+
+@media (width <= 768px){
+    body{
+        padding: 4rem 1.75rem;
+    }
+}
+@media (width <= 380px){
+    body{
+        padding: 4rem 1rem;
+    }
+}
