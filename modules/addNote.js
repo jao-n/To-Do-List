@@ -1,8 +1,7 @@
 
 const form = document.querySelector("form")
 
-form.onsubmit = (event) => {
-    event.preventDefault()
+form.onsubmit = () => {
 
     const input = form.querySelector("input")
     let value = input.value
