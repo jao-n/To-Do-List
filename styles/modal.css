@@ -1,4 +1,154 @@
 
+
+
+.container{
+    width:80%;
+    height:80vh;
+    display: flex;
+
+    position: fixed;
+    inset: 0;
+
+    z-index: 100;
+   
+
+    margin: auto;
+    margin-right: 1rem;
+
+    overflow: hidden;
+
+}
+
+.container.hide{
+    display: none;
+}
+.container.show{
+    display: flex;
+}
+
+.form-image{
+    width:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 1rem;
+}
+.form-image img{
+    width: 31rem;
+}
+.form{
+    width:30%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+
+    
+}
+.form-header{
+    margin-bottom: 3rem;
+    justify-content: space-between;
+}
+.form-header h1::after{
+    content:'';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: aqua;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+.input-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+
+    width: 30%;
+}
+.input-box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+.input-box input{
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+}
+.input-box input:hover{
+    background-color: var(--bg-primary)
+}
+.input-box input:focus-visible{
+    outline: 1px solid #6c63ff;
+}
+.input-box label{
+    font-size: 0.80rem;
+    font-weight: 600;
+    color: black;
+}
+.input-box input::placeholder{
+    color: var(--tx-primary);
+}
+.login-button{
+    width: 100%;
+    margin-top: 3.5rem;
+    border: none;
+    background-color: aqua;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: center;
+}
+.login-button button{
+    width: 50%;
+    border: none;
+    background-color: aqua;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+
+    display: initial;
+}
+.login-button button:hover{
+    background-color: #6b63fff1;
+    color: var(--tx-primary);
+    width: 100%;
+}
+.login-button button a{
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: black;
+}
+@media screen and (max-width:1330px){
+    .form-image{
+        display: none;
+    }
+    .container{
+        width: 50%;
+    }
+    .form{
+        width: 100%;
+    }
+}
+@media screen and (max-width:1064px){
+    .container{
+        width: 90%;
+        height: auto;
+    }
+    .input-group{
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+        max-height: 10rem;
+        padding-right: 5rem;
+    }
+}
+/*
 #modal{
 
     display: flex;
@@ -93,3 +243,5 @@
         }
     }
 }
+
+*/

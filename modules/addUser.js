@@ -3,7 +3,7 @@ import { modalOpen } from "./openModal.js"
 
 
 
-const form = document.querySelector(".form")
+const form = document.querySelector(".form-header")
 
 
 form.onsubmit = (event) => {
