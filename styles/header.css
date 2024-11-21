@@ -1,5 +1,6 @@
 
 body{
+    position: relative;
    & > header{
         display: flex;
         justify-content: space-between;
@@ -30,8 +31,9 @@ body{
             height: 2rem;
 
             border-radius: 8px;
+
+            cursor: pointer;
         }
     }
-    
 }
 

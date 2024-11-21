@@ -16,13 +16,15 @@
             <h1>To Do List</h1>
             <p>O que irá anotar hoje?</p>
         </div>
-        <img src="img/icon-7797704_1280.webp" alt="Imagem de usuario">
+        <img src="img/icon-7797704_1280.webp" alt="Imagem de usuario" id="user">
     </header>
+    
+       
 
-    <main>
+    <main class="">
         <header>
             <span id="complete">0 Concluidos</span>
-            <button id="eyeClosed"> <i class="ph ph-eye-slash"></i> Ocultar concluídos</button>
+            <button id="eyeClosed"> <i class="ph ph-eye-slash"></i> Deletar concluídos</button>
         </header>
         <section class="notes">
 
@@ -37,10 +39,20 @@
 
         </section>
     </main>
-            <form action="#">
-                <input type="text" placeholder="Digite uma nota">
+            <form  method="post">
+                <input type="text" name="nota" placeholder="Digite uma nota">
                 <button type="submit">Adicione nota</button>
             </form>
+
+            <div class="hide" id="modal">
+                <form class="form">
+                    <input type="text" placeholder="Digite seu nome">
+                    <input type="email" placeholder="Digite seu email">
+                    <input type="password" placeholder="Digite sua senha">
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
 
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <script type="module" src="script.js"></script>

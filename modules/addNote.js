@@ -2,6 +2,7 @@
 const form = document.querySelector("form")
 
 form.onsubmit = (event) => {
+
     event.preventDefault()
 
     const input = form.querySelector("input")
