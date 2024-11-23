@@ -104,7 +104,7 @@
     justify-content: center;
 }
 .login-button button{
-    width: 50%;
+    width: 100%;
     border: none;
     background-color: aqua;
     padding: 1rem 2rem;
@@ -124,7 +124,81 @@
     font-weight: 500;
     color: black;
 }
-@media screen and (max-width:1330px){
+
+@media (width >= 2000px){
+    .container{
+        width: 100%;
+
+       overflow: hidden;
+
+       margin: auto;
+       margin-inline: auto;
+
+       padding-left: 20rem;
+
+    }
+    .form-header img{
+        width: 100%;
+    }
+    .form-header h1{
+        position: absolute;
+        top: -35rem;
+        left: -14rem;
+
+        padding-left: 5rem;
+    }
+    .input-group{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 3rem;
+        width: 30%;
+
+        position: absolute;
+        top: -28rem;
+        left: -10rem;
+    }
+
+    .login-button{
+        margin-top: 1rem;
+    }
+
+    .login-button button{
+        width: 100%;
+    }
+}
+@media (width <= 1024px){
+    .container{
+        width: 95%;
+
+       overflow: hidden;
+
+       padding-left: 5rem;
+    }
+    .form-image img{
+       width: 80%;
+    }
+    .form-header h1{
+        padding-left: 5rem;
+    }
+    .input-group{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 3rem;
+        width: 30%;
+    }
+
+    .login-button{
+        margin-top: 1rem;
+    }
+
+    .login-button button{
+        width: 100%;
+    }
+}
+
+@media (width <= 768px){
     .form-image{
         display: none;
     }
@@ -135,17 +209,30 @@
         width: 100%;
     }
 }
-@media screen and (max-width:1064px){
+@media (width <= 768px){
+
     .container{
-        width: 90%;
-        height: auto;
+        width: 95%;
+        padding-left: 1rem;
     }
+    .form-header h1{
+        padding-left: 5rem;
+    }
+
     .input-group{
+        display: flex;
         flex-direction: column;
-        overflow-y: scroll;
-        flex-wrap: nowrap;
-        max-height: 10rem;
-        padding-right: 5rem;
+        justify-content: space-between;
+        padding-left: 3rem;
+        width: 100%;
+    }
+
+    .login-button{
+        margin-top: 1rem;
+    }
+
+    .login-button button{
+        width: 100%;
     }
 }
 /*
