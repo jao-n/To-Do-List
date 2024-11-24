@@ -8,11 +8,11 @@
     }
 
 
-    $sql = "INSERT INTO tarefas (nota) VALUES ('$nota')";
+    $sqlAdicionarNota = "INSERT INTO tarefas (nota) VALUES ('$nota')";
 
-    $sqlResult = "SELECT * FROM tarefas";
+    $sqlResultado = "SELECT * FROM tarefas";
 
-    $result = mysqli_query($conexao, $sqlResult);
+    $resultadoNotas = mysqli_query($conexao, $sqlResultado);
 
     // if (mysqli_query($conexao, $sql)) {
     //     // print "Dados cadastrados com sucesso";
@@ -21,23 +21,21 @@
     //     print "Error: " . $sql . "<br>" . mysqli_error($conexao);
     // }
 
-    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nota'])) {
-        $nota = mysqli_real_escape_string($conexao, $_POST['nota']);
-    
+    if (mysqli_query($conexao, $sqlAdicionarNota)) {
         // Insere a nota no banco
         $sql = "INSERT INTO tarefas (nota) VALUES ('$nota')";
-        if (!mysqli_query($conexao, $sql)) {
-            echo json_encode(["erro" => "Erro ao inserir nota: " . mysqli_error($conexao)]);
-            exit;
-        }
+
         header('Location: ../index.html');
+    } else {
+        echo json_encode(["erro" => "Erro ao inserir nota: " . mysqli_error($conexao)]);
+            exit;
     }
 
-    if ($result) {
+    if ($resultadoNotas) {
         $tarefas = [];
     
         // Loop para coletar os resultados em um array
-        while ($row = mysqli_fetch_assoc($result)) {
+        while ($row = mysqli_fetch_assoc($resultadoNotas)) {
             $tarefas[] = $row;
         }
     
