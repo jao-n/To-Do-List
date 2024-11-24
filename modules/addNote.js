@@ -1,7 +1,8 @@
 
-const form = document.querySelector("form")
 
-form.onsubmit = () => {
+const form = document.querySelector("#form")
+
+form.onsubmit = (event) => {
 
     const input = form.querySelector("input")
     let value = input.value
@@ -31,6 +32,5 @@ form.onsubmit = () => {
     div.append(check, imgDefault, imgChecked)
     divNotes.append(div, span)
     notes.append(divNotes)
-
-    input.value = ""
+    
 }
