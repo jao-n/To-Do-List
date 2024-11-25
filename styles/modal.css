@@ -167,6 +167,34 @@
         width: 100%;
     }
 }
+@media (width > 1600px) and (width < 2000px){
+    .form-header h1{
+        position: absolute;
+        top: -35rem;
+        left: -2rem;
+
+        padding-left: 5rem;
+    }
+
+    .input-group{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 3rem;
+
+        position: absolute;
+        top: -30rem;
+        left: 1rem;
+    }
+    .login-button{
+        margin-top: 1rem;
+    }
+
+    .login-button button{
+        width: 100%;
+    }
+    
+}
 @media (width <= 1024px){
     .container{
         width: 95%;
