@@ -27,7 +27,10 @@
             <button id="eyeClosed"> <i class="ph ph-eye-slash"></i> Deletar concluídos</button>
         </header>
         <section class="notes">
-
+ <form  action="backend/connection.php" method="POST" id="form">
+                <input type="text" name="nota" placeholder="Digite uma nota">
+                <button type="submit">Adicione nota</button>
+            </form>
         <div class="divNotes">
             <div>
                 <input type="checkbox">
@@ -39,10 +42,7 @@
 
         </section>
     </main>
-            <form  action="backend/connection.php" method="POST" id="form">
-                <input type="text" name="nota" placeholder="Digite uma nota">
-                <button type="submit">Adicione nota</button>
-            </form>
+           
 
             <div class="container hide" id="modal">  
                 <div class="form-image">

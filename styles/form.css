@@ -1,17 +1,12 @@
 
     form{
-
-        position: absolute;
-
-        bottom: 0;
-
+        /* position: absolute; */
+        /* bottom: 0; */
         margin-inline: auto;
-    
-        padding: 3rem 0rem;
-   
-        width: 90%;    
-    
-    
+        /* padding: 3rem 0rem; */
+        width: 100%; 
+        /*NAO FAÇO IDEIA COMO AJIETAR ISSO 
+        ------------NAO ESTA FUNCIONANDO*/
         & input{
             background-color: var(--bg-secondary);
             border: 0;
