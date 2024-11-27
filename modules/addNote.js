@@ -1,36 +1,29 @@
+import { getData } from "../services/getData.js";
 
-const form = document.querySelector("form")
+// Seleciona o formulário com ID 'form'
+const form = document.querySelector("#form");
 
-form.onsubmit = (event) => {
+// Define o evento 'onsubmit' do formulário
+form.onsubmit = () => {
+    // Seleciona o campo de entrada (input) dentro do formulário
+    const input = form.querySelector("input");
+    let value = input.value;
 
-    const input = form.querySelector("input")
-    let value = input.value
-    if(value.trim() === ""){
-        return alert("Digite algo")
+    // Verifica se o campo está vazio ou contém apenas espaços em branco
+    if (value.trim() === "") {
+        return alert("Digite algo"); // Exibe um alerta e interrompe o envio do formulário
     }
 
-    const notes = document.querySelector(".notes")
-    const divNotes = document.createElement("div")
-    divNotes.classList.add("divNotes")
+    // Função externa chamada para obter ou manipular os dados
+    getData(); 
+/*Resumo do que o código faz:
 
-    const div = document.createElement("div")
-    const imgDefault = document.createElement("img")
-    imgDefault.src = "img/default.png"
-    imgDefault.classList.add("appear")
+Configuração: O formulário é monitorado pelo ID para capturar interações.
 
-    const imgChecked = document.createElement("img")
-    imgChecked.src = "img/checked.png"
-    imgChecked.classList.add("hide")
+Validação: Checa se o campo está vazio ou só tem espaços; se sim, alerta o usuário e bloqueia o envio.
 
-    const check = document.createElement("input")
-    check.type = "checkbox"
-    check.classList.add("check")
-    const span = document.createElement("span")
-    span.textContent = value
+Função externa: Depois da validação, chama getData, que faz algo com os dados fornecidos.
 
-    div.append(check, imgDefault, imgChecked)
-    divNotes.append(div, span)
-    notes.append(divNotes)
-
-    input.value = ""
-}
+Objetivo: Garantir que o formulário só processe entradas válidas.
+*/
+};

@@ -21,13 +21,16 @@
     
        
 
-    <main> <!--aqui tinha atributo class vazio, removi. -Eduardo -->
+    <main class="">
         <header>
             <span id="complete">0 Concluidos</span>
             <button id="eyeClosed"> <i class="ph ph-eye-slash"></i> Deletar concluídos</button>
         </header>
         <section class="notes">
-
+ <form  action="backend/connection.php" method="POST" id="form">
+                <input type="text" name="nota" placeholder="Digite uma nota">
+                <button type="submit">Adicione nota</button>
+            </form>
         <div class="divNotes">
             <div>
                 <input type="checkbox">
@@ -39,10 +42,7 @@
 
         </section>
     </main>
-            <form action="backend/connection.php"  method="post">
-                <input type="text" name="nota" placeholder="Digite uma nota">
-                <button type="submit">Adicione nota</button>
-            </form>
+           
 
             <div class="container hide" id="modal">  
                 <div class="form-image">
@@ -63,7 +63,7 @@
                                 <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
                             </div>
                             <div class="login-button">
-                                <button type="submit">Fazer login</button>
+                                <button type="submit">Fazer login</a></button>
                             </div>
                         </div>
                    </form>

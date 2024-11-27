@@ -98,7 +98,7 @@ main{
     }
 }
 
-@media (width: 454px){ <!--troquei `@media (width <= 454px)` por `@media (max-width: 454px)´, estava errado. - Eduardo -->
+@media (width <= 454px){
     main{
         & header{
             flex-direction: column-reverse;
